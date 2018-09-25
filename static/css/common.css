@@ -1,0 +1,167 @@
+html{
+    font-size: 10px !important;
+    height: 100%;
+}
+body{
+    font-size:1.4rem;
+    font-family:"Microsoft YaHei", Arial, Helvetica, sans-serif;
+    color:#333333;
+    line-height: 1.7rem;
+    /*user-select:none;*/
+    /*-webkit-user-select: none;*/
+    /*-webkit-tap-highlight-color:transparent;*/
+    /*!*数字字母换行*!*/
+    word-break:break-all;
+    height: 100%;
+    background: white;
+}
+ul{
+    list-style: none;
+}
+.widthB100{width: 100%}
+.widthB25{width: 25%}
+
+.fontSize20{font-size: 2rem}
+.fontSize30{font-size: 3rem}
+
+.colorBlue300 {color: #73CAF2;}
+
+.backgroundBlue300{background: #73CAF2}
+
+.marginLeft5{margin-left: 0.5rem;}
+.marginTop10{margin-top: 1rem}
+.padding10{padding: 1rem}
+
+/*底部导航条*/
+.appNav{
+    width: 100%;
+    height: 5rem;
+    /* border-top: 0.1rem solid #908f92; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    padding: 0.5rem 0;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: 0px 1px 5px #adadad;
+}
+.appNav>a{
+    color: #999;
+    font-size: 1.2rem;
+}
+.appNav>a:active{
+    color: #999;
+    transform: scale(1.1);
+}
+.nav-icon{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 auto;
+}
+.showMenu{
+    font-size: 12px;
+    color: #999;
+}
+.showMenuBtn{
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background: #73CAF2;
+    line-height: 4.25rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-top: -2rem;
+    box-shadow: 0px -2px 1px -1px #c3c3c3;
+}
+.showMenuBtn .iconfont{
+    color: #fff;
+    font-size: 20px;
+}
+/*---------------------展开菜单---------------*/
+.overMenu{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    left:0;
+    top:0;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: rgba(253, 253, 253, 0.95);
+    height: 0px;
+    opacity: 0;
+    transition: opacity .1s;
+}
+.menuBlock .iconBlock span{
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    line-height: 6rem;
+    border-radius: 50%;
+    color: #fff;
+
+}
+.menuBlock .iconBlock{
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+.menuBlock .iconBlock span .iconfont{
+    font-size: 30px;
+}
+.menuBlock .iconBlock:nth-of-type(1){
+    transform:translateY(300px);
+    transition: all .2s ease-out;
+}
+.menuBlock .iconBlock:nth-of-type(2){
+    transform:translateY(300px);
+    transition: all .2s ease-out;
+    transition-delay: .08s;
+}
+.menuBlock .iconBlock:nth-of-type(1) span{
+    background: #007aff;
+}
+.menuBlock .iconBlock:nth-of-type(2) span{
+    background: #ffc107;
+}
+.menuBlock .iconBlock p{
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+}
+.overMenuMain{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+}
+.menuClose{
+    border-top: 1px solid #f2f2f2;
+    margin-top: 13rem;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+}
+.menuClose .iconfont{
+    font-size: 30px;
+}
+.overMenu.overActive{
+    height: 100%;
+    opacity: 1;
+}
+.overMenu.overActive{
+    z-index: 999;
+}
+.overMenu.overActive .menuBlock .iconBlock:nth-of-type(1){
+    transform:translateY(0px);
+}
+.overMenu.overActive .menuBlock .iconBlock:nth-of-type(2){
+    transform:translateY(0px);
+}
